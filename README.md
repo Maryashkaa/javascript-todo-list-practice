@@ -45,3 +45,9 @@ Backend и внешняя база данных не используются. �
 
 ```bash
 git clone https://github.com/Maryashkaa/javascript-todo-list-practice.git
+```
+## Деплой
+
+Опубликованная версия проекта:
+
+https://maryashkaa.github.io/javascript-todo-list-practice/
