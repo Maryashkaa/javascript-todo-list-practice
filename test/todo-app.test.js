@@ -149,7 +149,7 @@ test('render_footer view using (elmish) HTML DOM functions', function (t) {
 
   // todo-count should display 2 items left (still to be done):
   const left = document.getElementById('count').innerHTML;
-  t.equal(left, "<strong>2</strong> items left", "Todos remaining: " + left);
+  t.equal(left, "<strong>2</strong> items left · <strong>1</strong> completed", "Todos remaining: " + left);
 
   // count number of footer <li> items:
   t.equal(document.querySelectorAll('li').length, 3, "3 <li> in <footer>");
@@ -187,7 +187,7 @@ test('render_footer 1 item left (pluarisation test)', function (t) {
 
   // todo-count should display "1 item left" (still to be done):
   const left = document.getElementById('count').innerHTML;
-  t.equal(left, "<strong>1</strong> item left", "Todos remaining: " + left);
+  t.equal(left, "<strong>1</strong> item left · <strong>0</strong> completed", "Todos remaining: " + left);
 
   elmish.empty(document.getElementById(id)); // clear DOM ready for next test
   t.end();
@@ -205,7 +205,7 @@ test('view renders the whole todo app using "partials"', function (t) {
 
   // todo-count should display 0 items left (based on initial_model):
   const left = document.getElementById('count').innerHTML;
-  t.equal(left, "<strong>0</strong> items left", "Todos remaining: " + left);
+t.equal(left, "<strong>0</strong> items left · <strong>0</strong> completed", "Todos remaining: " + left);
 
   elmish.empty(document.getElementById(id)); // clear DOM ready for next test
   t.end();
